@@ -1,10 +1,7 @@
-"use client";
-import { useSearchParams } from "next/navigation";
 import SkeletonCard from "@/components/SkeletonCard";
 
 export default function Loading() {
-  const sp = useSearchParams();
-  const limit = Math.max(1, Number(sp.get("limit") ?? 12));
+  const limit = 12;
 
   return (
     <main className="p-6 space-y-6">

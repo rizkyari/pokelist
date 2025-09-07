@@ -6,8 +6,8 @@ type Props = { results: PokemonResult[] };
 
 export default function PokemonGrid({ results }: Props) {
     return (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md-grid-cols-4 xl:grid-cols-6 gap-4">
-            {results.map((p: any) => {
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-4">
+            {results.map((p) => {
                 const id = getPokemonIdFromUrl(p.url);
                 return <PokemonCard key={p.name} id={id} name={p.name} />
             })}
